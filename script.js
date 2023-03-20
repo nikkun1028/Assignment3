@@ -28,7 +28,6 @@ function addR() {
 // Add a column
 function addC() {
     // alert("Clicked Add Col");
-
     if(numRows == 0){
         addR();
         
@@ -48,7 +47,20 @@ function addC() {
 
 // Remove a row
 function removeR() {
-    alert("Clicked Remove Row"); // Replace this line with your code.
+    // alert("Clicked Remove Row");
+
+    if(numRows > 0){
+        let table = document.getElementById("grid");
+        let trLast = table.lastElementChild;
+        table.removeChild(trLast);
+        
+        numRows--;
+    }
+    else{
+        alert("No rows to remove!");
+    }
+
+
 }
 
 // Remove a column
