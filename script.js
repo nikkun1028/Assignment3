@@ -94,7 +94,15 @@ function selectColor(){
 
 // Fill all uncolored cells
 function fillU(){
-    alert("Clicked Fill All Uncolored");
+    // alert("Clicked Fill All Uncolored");
+    for(let i = 0; i < numRows; i++){
+        for(let c = 0; c < numCols; c++){
+            let td = document.getElementById("row"+i).children[c];
+            if(td.style.backgroundColor == ''){
+                td.style.backgroundColor = colorSelected;
+            }
+        }
+    }
 }
 
 // Fill all cells
@@ -116,7 +124,7 @@ function clearAll(){
     for(let i = 0; i < numRows; i++){
         for(let c = 0; c < numCols; c++){
             let td = document.getElementById("row"+i).children[c];
-            td.style.backgroundColor = colorInitial;
+            td.style.removeProperty("background-color");
         }   
     }
 
