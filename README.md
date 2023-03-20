@@ -2,4 +2,4 @@
 Grid Maker.
 
 ### Live Link
-[Website link](https://niikun1028.github.io/Assignment3/)
+[Website link](https://nikkun1028.github.io/Assignment3/)
