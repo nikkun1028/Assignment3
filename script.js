@@ -16,6 +16,7 @@ function addR() {
 
     for(let i = 0; i < numCols; i++){
         let td = document.createElement("td");
+        td.setAttribute("id", "col"+i);
         document.getElementById("row"+numRows).appendChild(td);
     }
 
@@ -35,6 +36,7 @@ function addC() {
     else{
         for(let i = 0; i < numRows; i++){
             let td = document.createElement("td");
+            td.setAttribute("id", "col"+numCols);
             document.getElementById("row"+i).appendChild(td);
         }
 
@@ -91,15 +93,23 @@ function selectColor(){
 
 // Fill all uncolored cells
 function fillU(){
-    alert("Clicked Fill All Uncolored"); // Replace this line with your code.
+    alert("Clicked Fill All Uncolored");
 }
 
 // Fill all cells
 function fillAll(){
-    alert("Clicked Fill All"); // Replace this line with your code.
+    // alert("Clicked Fill All");
+    for(let i = 0; i < numRows; i++){
+        for(let c = 0; c < numCols; c++){
+            let td = document.getElementById("row"+i).children[c];
+            td.style.backgroundColor = colorSelected;
+        }
+    }
 }
+
+
 
 // Clear all cells
 function clearAll(){
-    alert("Clicked Clear All"); // Replace this line with your code.
+    alert("Clicked Clear All");
 }
