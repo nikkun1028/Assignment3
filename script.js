@@ -1,7 +1,8 @@
 // Declare global variables
 let numRows = 0;
 let numCols = 0;
-let colorSelected; 
+let colorSelected;
+let colorInitial = "White";
 
 // Add a row
 function addR() {
@@ -111,5 +112,12 @@ function fillAll(){
 
 // Clear all cells
 function clearAll(){
-    alert("Clicked Clear All");
+    // alert("Clicked Clear All");
+    for(let i = 0; i < numRows; i++){
+        for(let c = 0; c < numCols; c++){
+            let td = document.getElementById("row"+i).children[c];
+            td.style.backgroundColor = colorInitial;
+        }   
+    }
+
 }
