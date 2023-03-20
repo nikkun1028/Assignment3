@@ -18,6 +18,9 @@ function addR() {
     for(let i = 0; i < numCols; i++){
         let td = document.createElement("td");
         td.setAttribute("id", "col"+i);
+        td.onclick = function(){
+            this.style.backgroundColor = colorSelected;
+        };
         document.getElementById("row"+numRows).appendChild(td);
     }
 
@@ -38,6 +41,9 @@ function addC() {
         for(let i = 0; i < numRows; i++){
             let td = document.createElement("td");
             td.setAttribute("id", "col"+numCols);
+            td.onclick = function(){
+                this.style.backgroundColor = colorSelected;
+            };
             document.getElementById("row"+i).appendChild(td);
         }
 
