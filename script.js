@@ -23,16 +23,28 @@ function addR() {
 
 }
 
-function addCell(){
-    let td = document.createElement("td");
 
-}
 
 // Add a column
 function addC() {
     // alert("Clicked Add Col");
-    
+
+    if(numRows == 0){
+        addR();
+        
+    }
+    else{
+        for(let i = 0; i < numRows; i++){
+            let td = document.createElement("td");
+            document.getElementById("row"+i).appendChild(td);
+        }
+
+        numCols++;
+    }
+
 }
+
+
 
 // Remove a row
 function removeR() {
